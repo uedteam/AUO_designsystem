@@ -1,0 +1,54 @@
+@mixin screen($size) {
+    $desktop: '(min-width: 1730px)';
+    $notebook: '(min-width: 1024px) and (max-width: 1729px)';
+    $tablet: '(max-width: 1023px)';
+    $mobile: '(max-width: 767px)';
+    $xs_mobile: '(max-width: 576px)';
+
+    @if $size ==desktop {
+        @media only screen and #{$desktop} {
+            @content;
+        }
+    }
+
+    @else if $size ==notebook {
+        @media only screen and #{$notebook} {
+            @content;
+        }
+    }
+
+    @else if $size ==tablet {
+        @media only screen and #{$tablet} {
+            @content;
+        }
+    }
+
+    @else if $size ==mobile {
+        @media only screen and #{$mobile} {
+            @content;
+        }
+    }
+
+    @else if $size ==xs_mobile {
+        @media only screen and #{$xs_mobile} {
+            @content;
+        }
+    }
+}
+
+@mixin text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin text-line($value, $line-hight) {
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis; // ellipsis＝省略
+    display: -webkit-box;
+    -webkit-line-clamp: $value;
+    -webkit-box-orient: vertical;
+    line-height: $line-hight; // X 填入行高 px 值
+    height: calc(#{$line-hight} * #{$value}); // 限定高度為 X * N 的 px 值
+}

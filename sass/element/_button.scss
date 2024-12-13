@@ -1,0 +1,48 @@
+.btn_grp {
+    margin: 2em 0;
+    position: relative;
+    display: flex;
+
+}
+
+a {
+    &.btn {
+        cursor: pointer;
+        min-width: 120px;
+        max-width: 360px;
+        display: flex;
+        align-items: center;
+        height: 2.75em;
+        padding: .5em 2em;
+        font-size: 1.25em;
+        border-radius: 3em;
+        text-align: center;
+        outline: 0 !important;
+        overflow: hidden;
+        border: none;
+        position: relative;
+        z-index: 1;
+        font-weight: normal;
+        transition: 0.3s ease-out;
+        background-color: $secondaryColor;
+
+        &:hover,
+        &:focus {
+            span {
+                color: #fff;
+            }
+
+            background-color: $lightColor;
+        }
+    }
+
+    .btn-title {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.btn-primary {
+        background-color: #00b8d4;
+        color: #fff;
+    }
+}

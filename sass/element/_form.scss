@@ -1,0 +1,581 @@
+$form_title_width: 150px; // 表單title寬度
+
+@mixin formStyle($f_color: $color-word, $f_border: $color-gray, $f_radius: 0.5em) {
+    color: $f_color;
+    font-size: 1em;
+    border: 1px solid $auo-blue;
+    height: 3em;
+    padding: 0.5em 1em;
+    background: #fff;
+    vertical-align: middle;
+    margin-bottom: 0.3em;
+    // @include box-sizing;
+    transition: 0.3s ease-out;
+    border-radius: 0.5em;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.form_grid {
+    font-size: 0.938em;
+    margin: 0.5em;
+    border-top: 1px solid #ddd;
+
+    .form_grp {
+        border-bottom: 1px dashed #ddd;
+        overflow: hidden;
+        padding: 0.2em 0;
+
+        // 閱讀條文
+        &.agree {
+            border-bottom: none;
+
+            label {
+                float: left;
+                width: auto;
+                margin: 0 0.5em 0.5em 0;
+            }
+        }
+    }
+
+    .form_title {
+        float: left;
+        width: $form_title_width;
+        padding: 0 1em;
+        padding-top: 5px;
+
+        @include screen('mobile') {
+            width: 100%;
+        }
+    }
+
+    .form_content {
+        float: left;
+        padding-top: 3px;
+        width: calc(100% - #{$form_title_width});
+        padding: 0 1em;
+        overflow: hidden;
+
+        @include screen('mobile') {
+            width: 100%;
+        }
+
+        // 第二層的設定
+        .form_grp {
+            min-height: 2.5em;
+
+            .form_content {
+                float: none;
+                display: block;
+                padding: 0 1em;
+
+                &.form_inline {
+
+                    input[type='text'],
+                    select {
+                        width: auto;
+                        min-width: 100px;
+                        display: inline-block;
+
+                        @include screen('xs_mobile') {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+        }
+
+        // 電話專屬
+        .tel {
+            input[type='text']:first-child {
+                background: url(../images/icon/icon_add.svg) no-repeat 0.5em center;
+                background-size: 12px;
+                padding-left: 1.5em;
+            }
+
+            input[type='text']:first-child,
+            select:first-child {
+                width: 100px !important;
+
+                &~input {
+                    width: calc(100% - 200px);
+
+                    @include screen('xs_mobile') {
+                        width: 100% !important;
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+        // 生日專屬
+        .birthday {
+            select {
+                display: inline-block;
+                margin-right: 0.5em;
+                text-align-last: center;
+
+                @include screen('xs_mobile') {
+                    width: 88% !important;
+                    min-width: 88% !important;
+                    display: inline-block !important;
+                    text-align-last: left;
+                }
+
+                option {
+                    text-align: center;
+                }
+
+                ~select {
+                    margin-left: 0.2em;
+
+                    @include screen('xs_mobile') {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        // 地址專屬
+        .address {
+            select {
+                min-width: 100px;
+
+                option {
+                    text-align: center;
+                }
+
+                @include screen('xs_mobile') {
+                    width: 100px;
+                    display: inline-block !important;
+                }
+            }
+
+            input[type='text'] {
+                width: calc(100% - 211px) !important;
+
+                @include screen('mobile') {
+                    display: block !important;
+                    width: 100% !important;
+                }
+            }
+        }
+
+        // 日期專屬
+        .datepick {
+            padding-right: 0.5em;
+            position: relative;
+            display: inline-block;
+
+            @include screen('xs_mobile') {
+                width: 100%;
+                display: block;
+            }
+
+            &+.datepick {
+                margin-left: 0.3em;
+                margin-right: 0;
+                padding-right: 0;
+
+                &:before {
+                    content: '~';
+                    font-size: 1.5em;
+                    display: inline-block;
+                    position: absolute;
+                    left: -0.65em;
+                    top: 0.3em;
+                    color: #777;
+                }
+
+                @include screen('xs_mobile') {
+                    margin-left: 0em;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                i {
+                    right: 0.5em;
+                }
+            }
+
+            i {
+                position: absolute;
+                padding: 0.37em 0.1em !important;
+                right: 1em;
+                top: 0.2em;
+                min-width: 1em;
+                background: none;
+                border: none;
+                width: auto;
+                pointer-events: none;
+
+                &:hover,
+                &:focus {
+                    box-shadow: none;
+                    border: none !important;
+                }
+            }
+
+            >input[type='text'] {
+                width: 10em;
+                padding-right: 2em;
+
+                @include screen('xs_mobile') {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//---------------------------------------------form setting--------//
+form {
+
+    .form_grp,
+    .check_grp,
+    .radio_grp,
+    .btn_grp,
+    .upload_grp {
+        margin-bottom: 0.2em;
+    }
+
+    .check_grp,
+    .radio_grp {
+        display: block;
+
+        label {
+            display: block;
+        }
+
+        // radio與check個別行內設定
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin: 0.2em 0.5em 0 0;
+            }
+        }
+    }
+
+    .form_grp,
+    .upload_grp {
+
+        // 文字表單個別行內設定
+        &.form_inline {
+            label {
+                display: inline-block;
+                margin-right: 0.5em;
+            }
+
+            input,
+            textarea,
+            select {
+                width: auto;
+            }
+        }
+    }
+
+    // form 全域行內設定
+    &.form_inline {
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5em;
+
+            &~input,
+            &~textarea {
+                display: inline-block;
+                width: auto;
+                vertical-align: middle;
+            }
+        }
+
+        input[type='text'],
+        input[type='password'],
+        select,
+        textarea {
+            width: auto;
+            display: inline-block;
+        }
+
+        .form_grp,
+        .check_grp,
+        .radio_grp,
+        .btn_grp,
+        .upload_grp {
+            display: inline-block;
+            margin-right: 0.5em;
+        }
+
+        // .check_grp,
+        // .radio_grp {}
+
+        .btn_grp {
+
+            .btn,
+            input[type='submit'],
+            input[type='reset'],
+            input[type='button'],
+            input[type='search'] {
+                margin-top: -3px;
+                padding: 0.45em 1em;
+            }
+        }
+
+        select,
+        textarea {
+            width: auto;
+        }
+    }
+}
+
+//---------------------------------------------下拉選單--------//
+label,
+legend {
+    // white-space: nowrap;
+    display: inline-block;
+    margin: 0 0 0.5em 0;
+
+    @include screen('xs_mobile') {
+        display: block;
+    }
+
+    &.inline {
+
+        input,
+        select,
+        textarea {
+            width: auto;
+        }
+    }
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+//---------------------------------------------預設設定--------//
+input,
+textarea,
+select,
+button {
+    @include formStyle(); // 預設載入formStyle設定
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    -webkit-appearance: none; //清除 safari 的預設樣式
+    -moz-appearance: none;
+    appearance: none;
+}
+
+//---------------------------------------------文字輸入表單--------//
+input[type='text'],
+input[type='password'],
+input[type='file'],
+input[type='tel'] {
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: darken($color-gray, 20);
+    }
+
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: darken($color-gray, 20);
+    }
+
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: darken($color-gray, 20);
+    }
+
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: darken($color-gray, 20);
+    }
+}
+
+textarea {
+    @include formStyle();
+    height: 5em;
+    overflow-y: scroll;
+
+    @include screen('xs_mobile') {
+        width: 100%;
+    }
+}
+
+input[type='text']:focus,
+input[type='reset']:focus,
+input[type='file']:focus,
+input[type='tel']:focus,
+input[type='password']:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid lighten($form-focus, 20);
+    outline: none;
+    box-shadow: 0px 0px 0px 2px lighten($form-focus, 20);
+}
+
+//
+//---------------------------------------------下拉選單--------//
+select {
+    line-height: 3em;
+    height: 3em;
+    padding: 0em 1em;
+    border: 1px solid $auo-blue;
+    background: #fff url(../images/i_select_arrow.svg) no-repeat right center;
+    background-size: 16px;
+
+    option {
+        outline: none;
+        border: none;
+    }
+
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+    }
+}
+
+//---------------------------------------------reset--------//
+input[type='reset'] {
+    text-shadow: none;
+}
+
+//---------------------------------------------checkbox & radio--------//
+input[type='checkbox'],
+input[type='radio'] {
+    font-size: 1em;
+    margin: -4px 0.2em 0 0;
+    width: 1em;
+    height: 1em;
+    background-color: #f7f6ee;
+    border: 2px solid $color-gray;
+    border-radius: 2px;
+    margin-right: 0.5em;
+}
+
+input[type='radio'] {
+    border-radius: 50%;
+}
+
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+    border-color: $form-focus;
+    background-color: $form-focus;
+    outline: none;
+}
+
+input[type='checkbox']:checked {
+    background-image: url(../images/basic/icon_checked.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 98%;
+    box-shadow: $form-focus 0 0 0 1px;
+    border-radius: 2px;
+}
+
+input[type='radio']:checked {
+    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
+}
+
+//---------------------------------------------readonly disable -------//
+input[readonly],
+input[disable] {
+    background: lighten($color-gray, 15);
+    color: darken($color-gray, 10);
+    border-color: darken($color-gray, 10);
+
+    &~label {
+        color: darken($color-gray, 10);
+    }
+
+    &:hover,
+    &:focus {
+        border-color: darken($color-gray, 10);
+        box-shadow: none; // cursor: not-allowed;
+    }
+}
+
+// 檔案上傳
+// https://codepen.io/shubhamc_007/pen/oZyodd
+.upload_grp {
+    position: relative;
+
+    input[readonly],
+    input[disable] {
+        background: transparent;
+        color: #666;
+    }
+
+    .upload_btn {
+        position: absolute;
+        overflow: hidden;
+        top: 1px;
+        right: 3px;
+        padding: 0.2em 1em !important;
+        border-radius: 4px;
+
+        &:hover,
+        &:focus {
+            cursor: pointer !important;
+        }
+    }
+}
+
+input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+//---------------------------------------------captcha--------//
+img.captcha {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 2.5em;
+    margin-bottom: 0.3em;
+
+    &+input {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    ~.btn {
+        margin-top: -1px;
+    }
+
+    ~img {
+        display: inline-block;
+        vertical-align: middle;
+        max-height: 2.4em;
+        margin-bottom: 0.5em;
+    }
+}
+
+//---------------------------------------------必填欄位說明--------//
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+}
