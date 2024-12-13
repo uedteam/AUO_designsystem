@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AUO Design System</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <meta name="theme-color" content="#041f43">
+    <!-- SEO & facebook -->
+    <meta name="description"
+        content="由友達設計創新研究院/數位體驗設計處開發的AUO Design System，致力於形塑友達數位產品的設計語言，優化 B 端企業及 C端市場的使用者體驗，加速產品開發流程，並提供清晰的設計規範指引、豐富的元件庫和實用的開發資源，幫助設計師和開發者打造一致、高效能且美觀的使用者介面，為產品提供絕佳操作體驗。" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="AUO Design System" />
+    <meta property="og:description"
+        content="由友達設計創新研究院/數位體驗設計處開發的AUO Design System，致力於形塑友達數位產品的設計語言，優化 B 端企業及 C端市場的使用者體驗，加速產品開發流程，並提供清晰的設計規範指引、豐富的元件庫和實用的開發資源，幫助設計師和開發者打造一致、高效能且美觀的使用者介面，為產品提供絕佳操作體驗。" />
+    <meta property="og:image" content="" />
+    <!--  css -->
+    <link rel="stylesheet" href="css/inner_page.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css" />
+    <link rel="stylesheet" href="vendor/aos/aos.css" />
+    <link rel="stylesheet" href="vendor/before_after/before-after.min.css">
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- LINE facebook thumbnail -->
+    <div class="cover">
+        <img src="images/covert_thumbnail.jpg" alt="" />
+    </div>
+    <!-- wrapper Start-->
+    <div class="wrapper">
+        <!-- sidebar Start -->
+        <div class="sidebar">
+            <!-- menu Start -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#"> <span>設計元件</span></a>
+                        <ul class="submenu">
+                            <li><a href="getting_started.html">快速開始 Getting Started</a>
+                            </li>
+                            <li><a href="overview.html">設計總覽 Overview</a></li>
+                            <li><a href="foundation.html">基礎 Foundations</a>
+                                <ul class="submenu">
+                                    <li><a href="border.html">Border</a></li>
+                                    <li><a href="color.html">Color</a></li>
+                                    <li><a href="data_visualization.html">Data Visualization</a></li>
+                                    <li><a href="elevation.html">Elevation</a></li>
+                                    <li><a href="icon.html">Icon</a></li>
+                                    <li><a href="grid.html">Grid</a></li>
+                                    <li><a href="layout.html">Layout</a></li>
+                                    <li><a href="shape.html">Shape</a></li>
+                                    <li><a href="spacing.html">Spacing</a></li>
+                                    <li><a href="states.html">States</a></li>
+                                    <li><a href="typography.html">Typography</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">元件 Components</a>
+                                <ul class="submenu">
+                                    <li><a href="accordion.html">Accordion</a></li>
+                                    <li><a href="avatar.html">Avatar</a></li>
+                                    <li><a href="badge.html">Badge</a></li>
+                                    <li><a href="breadcrumb.html">Breadcrumbs</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="cards.html">Cards</a></li>
+                                    <li><a href="checkbox.html">Checkbox</a></li>
+                                    <li><a href="date_picker.html">Date Picker</a></li>
+                                    <li><a href="dialogs.html">Dialogs / Modal</a></li>
+                                    <li><a href="divider.html">Divider</a></li>
+                                    <li><a href="dropdown.html">Dropdown</a></li>
+                                    <li><a href="file_uploader.html">File Uploader</a></li>
+                                    <li><a href="form.html">Form</a></li>
+                                    <li><a href="menu.html">Menu</a></li>
+                                    <li><a href="navigation.html">Navigation</a></li>
+                                    <li><a href="pagination.html">Pagination</a></li>
+                                    <li><a href="progress_indicator.html">Progress Indicator</a></li>
+                                    <li><a href="radio_button.html">Radio Button</a></li>
+                                    <li><a href="search.html">Search</a></li>
+                                    <li><a href="slider.html">Slider</a></li>
+                                    <li><a href="status_indicator.html">Status Indicator</a></li>
+                                    <li><a href="steppers.html">Steppers</a></li>
+                                    <li><a href="tabs.html">Tabs</a></li>
+                                    <li><a href="table.html">Table</a></li>
+                                    <li><a href="tags.html">Tags / Chips</a></li>
+                                    <li><a href="text_field.html">Text Field</a></li>
+                                    <li><a href="toast.html">Toast</a></li>
+                                    <li><a href="toggle.html">Toggle / Switch</a></li>
+                                    <li><a href="tooltip.html">Tooltip</a></li>
+                                </ul>
+                            <li><a href="template.html">範本 Template</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="developer.html"> <span>前端開發</span></a>
+                    </li>
+                    <li>
+                        <a href="service.html"> <span>設計服務</span></a>
+                    </li>
+                    <li>
+                        <a href="download.html"> <span>資源下載</span></a>
+                    </li>
+                    <li>
+                        <a href="support.html"> <span>支援</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- header Start-->
+        <header class="header">
+            <div class="container">
+                <!-- h1 Logo -->
+                <h1>
+                    <a href="index.html">
+                        <span>AUO Design System</span>
+                    </a>
+                </h1>
+                <!-- menu Start -->
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="getting_started.html"> <span>設計元件</span></a>
+                        </li>
+                        <li>
+                            <a href="developer.html"> <span>前端開發</span></a>
+                        </li>
+                        <li>
+                            <a href="service.html"> <span>設計服務</span></a>
+                        </li>
+                        <li>
+                            <a href="download.html"> <span>資源下載</span></a>
+                        </li>
+                        <li>
+                            <a href="support.html"> <span>支援</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- mobile_menu Start -->
+                <div class="mobile_button">
+                    <a href="#" class="btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- content -->
+        <div class="inner_page">
+            <div class="container">
+                <div class="left_sidebar">
+                    <div class="inner_menu">
+                        <!-- 外部載入 -->
+                    </div>
+                </div>
+                <!-- 內容 -->
+                <div class="inner_content">
+                    <div class="inner_container">
+                        <div class="ds_content">
+                            <div class="title">
+                                <span>設計總覽<small>Overview</small></span>
+                            </div>
+                            <div class="all_components">
+                                <div class="item">
+                                    <a href="accordion.html">
+                                        <div class="img-container">
+                                            <img src="images/components/accordion.jpg" alt="">
+                                        </div>
+                                        <h4>Accordion</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="avatar.html">
+                                        <div class="img-container">
+                                            <img src="images/components/avatar.jpg" alt="">
+                                        </div>
+                                        <h4>Avatar</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="badge.html">
+                                        <div class="img-container">
+                                            <img src="images/components/badge.jpg" alt="">
+                                        </div>
+                                        <h4>Badge</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="breadcrumb.html">
+                                        <div class="img-container">
+                                            <img src="images/components/breadcrumb.jpg" alt="">
+                                        </div>
+                                        <h4>Breadcrumbs</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="buttons.html">
+                                        <div class="img-container">
+                                            <img src="images/components/buttons.jpg" alt="">
+                                        </div>
+                                        <h4>Buttons</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="cards.html">
+                                        <div class="img-container">
+                                            <img src="images/components/cards.jpg" alt="">
+                                        </div>
+                                        <h4>Cards</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="checkbox.html">
+                                        <div class="img-container">
+                                            <img src="images/components/checkbox.jpg" alt="">
+                                        </div>
+                                        <h4>Checkbox</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="date_picker.html">
+                                        <div class="img-container">
+                                            <img src="images/components/date_picker.jpg" alt="">
+                                        </div>
+                                        <h4>Date picker</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="dialogs.html">
+                                        <div class="img-container">
+                                            <img src="images/components/dialogs.jpg" alt="">
+                                        </div>
+                                        <h4>Dialogs/Modal</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="divider.html">
+                                        <div class="img-container">
+                                            <img src="images/components/divider.jpg" alt="">
+                                        </div>
+                                        <h4>Divider</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="dropdown.html">
+                                        <div class="img-container">
+                                            <img src="images/components/dropdown.jpg" alt="">
+                                        </div>
+                                        <h4>Dropdown Menu</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="file_uploader.html">
+                                        <div class="img-container">
+                                            <img src="images/components/file_uploader.jpg" alt="">
+                                        </div>
+                                        <h4>File Uploader</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="form.html">
+                                        <div class="img-container">
+                                            <img src="images/components/form.jpg" alt="">
+                                        </div>
+                                        <h4>Form</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="menu.html">
+                                        <div class="img-container">
+                                            <img src="images/components/menu.jpg" alt="">
+                                        </div>
+                                        <h4>Menu</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="navigation.html">
+                                        <div class="img-container">
+                                            <img src="images/components/navigation.jpg" alt="">
+                                        </div>
+                                        <h4>Navigation</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="pagination.html">
+                                        <div class="img-container">
+                                            <img src="images/components/pagination.jpg" alt="">
+                                        </div>
+                                        <h4>Pagination</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="progress_indicator.html">
+                                        <div class="img-container">
+                                            <img src="images/components/progress_indicator.jpg" alt="">
+                                        </div>
+                                        <h4>Progress Indicator</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="radio_button.html">
+                                        <div class="img-container">
+                                            <img src="images/components/radio_button.jpg" alt="">
+                                        </div>
+                                        <h4>Radio Button</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="search.html">
+                                        <div class="img-container">
+                                            <img src="images/components/search.jpg" alt="">
+                                        </div>
+                                        <h4>Search</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="slider.html">
+                                        <div class="img-container">
+                                            <img src="images/components/slider.jpg" alt="">
+                                        </div>
+                                        <h4>Slider</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="status_indicator.html">
+                                        <div class="img-container">
+                                            <img src="images/components/status_indicator.jpg" alt="">
+                                        </div>
+                                        <h4>Status Indicator</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="steppers.html">
+                                        <div class="img-container">
+                                            <img src="images/components/steppers.jpg" alt="">
+                                        </div>
+                                        <h4>Steppers</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="tabs.html">
+                                        <div class="img-container">
+                                            <img src="images/components/tabs.jpg" alt="">
+                                        </div>
+                                        <h4>Tabs</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="table.html">
+                                        <div class="img-container">
+                                            <img src="images/components/table.jpg" alt="">
+                                        </div>
+                                        <h4>Table</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="tags.html">
+                                        <div class="img-container">
+                                            <img src="images/components/tags.jpg" alt="">
+                                        </div>
+                                        <h4>Tags/Chips</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="text_field.html">
+                                        <div class="img-container">
+                                            <img src="images/components/text_field.jpg" alt="">
+                                        </div>
+                                        <h4>Text Field</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="toast.html">
+                                        <div class="img-container">
+                                            <img src="images/components/toast.jpg" alt="">
+                                        </div>
+                                        <h4>Toast</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="toggle.html">
+                                        <div class="img-container">
+                                            <img src="images/components/toggle.jpg" alt="">
+                                        </div>
+                                        <h4>Toggle/Switch</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="tooltip.html">
+                                        <div class="img-container">
+                                            <img src="images/components/tooltip.jpg" alt="">
+                                        </div>
+                                        <h4>Tooltip</h4>
+                                        <h5>中文名稱</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer Start -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_logo">AUO Design System </div>
+                <div class="link">
+                    <ul>
+                        <li>資源下載 <ul>
+                                <li><a href="download.html">Vue</a></li>
+                                <li><a href="download.html">React</a></li>
+                                <li><a href="download.html">Figma</a></li>
+                            </ul>
+                        </li>
+                        <li>支援 <ul>
+                                <li><a href="support.html">常見問題</a></li>
+                                <li><a href="support.html">聯絡我們</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="coyright">
+                    <a href="https://www.auo.com/zh-TW/privacy-policy" target="_blank">隱私權說明</a>
+                    <p>AUO Design Center | Digital Experience Design</p>
+                    <p>© 2025 AUO Corporation, All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body> <a href="javascript:;" class="scrollToTop">回頁首</a>
+
+</html>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="vendor/lazyload/lazyload.js"></script>
+<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+<script src="js/customize.js"></script>
+<script src="js/load-sidemenu.js"></script>

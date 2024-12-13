@@ -1,0 +1,55 @@
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+}
+.ba-slider img {
+    width: 100%;
+    display: block;
+    max-width: none;
+}
+.ba-slider .resize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+.ba-slider .handle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    /* margin-left: -1px; */
+    background: rgba(0, 0, 0, 0.15);
+    cursor: ew-resize;
+}
+.ba-slider .handle:after {
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    content: '';
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    line-height: 64px;
+    background: url(arrow.svg) no-repeat center center #000e46;
+    background-size: 48px;
+    border: 1px solid #000e46;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.ba-slider .handle.ba-draggable:after {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    line-height: 50px;
+    font-size: 30px;
+    background: url(arrow.svg) no-repeat center center #000e46;
+    background-size: 36px;
+}
