@@ -1794,8 +1794,8 @@ section.auo_dsfeature {
                 display: block;
             }
 
-            p,li {
-                font-size: 1.25em;
+            p,ul {
+                font-size: 1.3em;
 
                 @include screen('mobile') {
                     font-size: 1.15em;
