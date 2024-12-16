@@ -248,7 +248,7 @@ hr {
             }
 
         }
-
+        
         .type_heading {
             h3 {
                 padding-top: 0.25em;
@@ -427,6 +427,22 @@ hr {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+// 電子報「歡迎搶先使用」
+.auo_welcome {
+    h2 {
+        font-size: 2.6em;
+        // margin: 0;
+        text-align: center;
+        color: #FFF;
+    }
+    p {
+        color: #FFF;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -1695,7 +1711,8 @@ hr {
     }
 }
 
-.auo_efficiency {
+.auo_efficiency,
+.auo_dsfeature {
     .container {
         display: flex;
         flex-flow: row wrap;
@@ -1751,6 +1768,29 @@ hr {
                     font-size: 1.125em;
                 }
             }
+        }
+    }
+}
+section.auo_dsfeature {
+    padding-top: 2em;
+
+    .container {
+        margin-top: 0px;
+        padding-top: 0;
+        border-top: none;
+        justify-content: center;
+
+        .item {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 25%;
+
+            h3 {
+                display: block;
+            }
+        }
+        .highlight {
+            color: #31EDF4;
         }
     }
 }
