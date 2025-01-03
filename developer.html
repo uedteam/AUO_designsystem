@@ -108,19 +108,19 @@
                     <h2>前端開發 <small>提供前端工程師開發用的程式碼與環境設定</small></h2>
                 </div>
             </div>
+            <!-- Storybook -->
             <div class="inner_list">
                 <div class="container">
                     <div class="inner_h3_title">
-                        <h3 data-aos="fade-left" data-aos-duration="750" data-aos-delay="100">Storybook <small>Lorem
-                                ipsum dolor sit amet consectetur adipisicing elit.</small>
-                        </h3>
+                        <h3 data-aos="fade-left" data-aos-duration="750" data-aos-delay="100">Storybook</h3>
+                        <p>透過 Storybook，設計師、開發者及 QA 團隊可在單一平台中溝通與迭代，構建清晰且標準化的設計系統，確保產品介面的一致性和品質。</p>
                     </div>
                     <div class="inner_info_content">
                         <div class="service_info">
                             <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="300" class="item">
                                 <h4>Vue版本</h4>
                                 <div class="img-container">
-                                    <a href="https://uedteam.github.io/DED-WDS_VUE/?path=/docs/anytitle--docs"
+                                    <a href="https://uedteam.github.io/DED-WDS_VUE/"
                                         target="_blank">
                                         <img data-src="images/storybook_vue.jpg" alt="" class="lazy">
                                     </a>
@@ -129,7 +129,7 @@
                             <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="500" class="item">
                                 <h4>React版本</h4>
                                 <div class="img-container">
-                                    <a href="https://uedteam.github.io/DED-WDS_REACT/?path=/docs/changelog--docs"
+                                    <a href="https://uedteam.github.io/DED-WDS_REACT"
                                         target="_blank">
                                         <img data-src="images/storybook_react.jpg" alt="" class="lazy">
                                     </a>
@@ -139,6 +139,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 安裝說明 -->
             <div class="inner_list">
                 <div class="container">
                     <div class="inner_h3_title">
@@ -151,9 +152,9 @@
                                     <div class="num">01.</div>建立開發環境
                                 </h4>
                                 <ul>
-                                    <li>npx create-react-app ${my-app}</li>
-                                    <li>cd ${my-app}</li>
-                                    <li>npm start</li>
+                                    <li>npm create vite@latest</li>
+                                    <li>cd ${my-project}</li>
+                                    <li>npm run dev</li>
                                 </ul>
                             </div>
                             <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="300" class="item">
@@ -162,7 +163,7 @@
                                 </h4>
                                 <ul>
                                     <li>開啟 package.json 設定檔</li>
-                                    <li>新增 SASS 到 devDependencies : "sass": "^1.55.0"</li>
+                                    <li>新增 SASS 到 devDependencies : "sass": "^1.81.0"</li>
                                     <li>執行 npm install</li>
                                     <li>執行 npm i ded-wds</li>
                                 </ul>
@@ -172,9 +173,9 @@
                                     <div class="num">03.</div>引用SCSS
                                 </h4>
                                 <ul>
-                                    <li>複製 style 資料夾</li>
-                                    <li>style.zip</li>
-                                    <li>進入點檔案( index.js )引用 globals.scss</li>
+                                    <li><a href="https://storage.googleapis.com/ded-wds-bucket/style.zip" class="link-download" target="_blank">下載 style.zip</a></li>
+                                    <li>複製 style 資料夾至 src 資料夾</li>
+                                    <li>進入點檔案( App.tsx )引用 globals.scss</li>
                                 </ul>
                             </div>
                             <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="700" class="item">
@@ -186,6 +187,68 @@
                                     <li>設定、複製、貼上</li>
                                     <li>程式開發</li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 引用套件 -->
+            <div class="inner_list">
+                <div class="container">
+                    <div class="inner_h3_title">
+                        <h3 data-aos="fade-left" data-aos-duration="750" data-aos-delay="100">引用套件</h3>
+                        <p>Design system 為提供便利的功能，部分常見元件採用功能完善的第三方套件以加快開發時程。</p>
+                    </div>
+                    <div class="inner_info_content">
+                        <div class="service_info plugin-list">
+                            <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="300" class="item">
+                                <h4>vanillajs-datepicker</h4>
+                                <div class="img-container">
+                                    <a href="https://github.com/mymth/vanillajs-datepicker?tab=readme-ov-file"
+                                        target="_blank">
+                                        <img data-src="images/logo-js.svg" alt="" class="lazy">
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="500" class="item">
+                                <h4>uppy file uploader</h4>
+                                <div class="img-container">
+                                    <a href="https://uppy.io/"
+                                        target="_blank">
+                                        <img data-src="images/logo-uppy.svg" alt="" class="lazy">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 其他 -->
+            <div class="inner_list">
+                <div class="container">
+                    <div class="inner_h3_title">
+                        <h3 data-aos="fade-left" data-aos-duration="750" data-aos-delay="100">其他</h3>
+                        <p>更多的相關資源</p>
+                    </div>
+                    <div class="inner_info_content">
+                        <div class="service_info plugin-list">
+                            <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="300" class="item">
+                                <h4>SASS</h4>
+                                <div class="img-container">
+                                    <a href="https://sass-lang.com/"
+                                        target="_blank">
+                                        <img data-src="images/logo-sass.svg" alt="" class="lazy">
+                                    </a>
+                                </div>
+                            </div>
+                            <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="300" class="item">
+                                <h4>Google Material Symbols</h4>
+                                <div class="img-container">
+                                    <a href="https://fonts.google.com/icons"
+                                        target="_blank">
+                                        <img data-src="images/logo-google-meterial.svg" alt="" class="lazy">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
