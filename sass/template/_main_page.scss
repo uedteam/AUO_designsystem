@@ -1260,6 +1260,16 @@ hr {
                         padding-right: 0;
                     }
 
+                    .link-download {
+                        text-decoration: underline;
+                        color: rgba(255,255,255,.75);
+
+                        &:hover {
+                            color: #FFF;
+                        }
+
+                    }
+
                     .img-container {
                         width: 80%;
                         margin: 2em 10% 0;
@@ -1297,6 +1307,17 @@ hr {
                             line-height: 1.45em;
                             margin-bottom: 0.5em;
                             color: rgba(255, 255, 255, 0.75);
+                        }
+                    }
+                }
+            }
+            .plugin-list {
+                .item {
+                    .img-container {
+                        background-color: #fff;
+                        img {
+                            object-fit: contain;
+                            border: 20px solid transparent;
                         }
                     }
                 }
